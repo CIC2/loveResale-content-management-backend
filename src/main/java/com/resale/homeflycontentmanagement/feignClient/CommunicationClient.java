@@ -1,0 +1,15 @@
+package com.resale.homeflycontentmanagement.feignClient;
+
+import com.resale.homeflycontentmanagement.components.objectstorage.dto.OtpMailDTO;
+import com.resale.homeflycontentmanagement.utils.ReturnObject;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@FeignClient(name = "communication-ms", url = "${communication.service.url}")
+public interface CommunicationClient {
+
+    @PostMapping("/mail/user/sendMail")
+    ReturnObject<String> sendOtpMail(@RequestBody OtpMailDTO otpMailDTO);
+}
+
