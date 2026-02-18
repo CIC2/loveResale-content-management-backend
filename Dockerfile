@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y fontconfig libfreetype6 && rm -rf /var/
 WORKDIR /app
 
 # Use exact path here:
-COPY --from=build /build/target/homefly-content-management-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY --from=build /build/target/loveresale-content-management-0.0.1-SNAPSHOT.jar /app/app.jar
 
 EXPOSE 8033
 
