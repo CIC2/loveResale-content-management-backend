@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Repository
 public interface TypesReportRepository extends JpaRepository<UsageTypeReportView, Integer> {
     @Query("""
-    SELECT new com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.report.dto.UsageTypeReportResponse(
+    SELECT new com.resale.resalecontentmanagement.report.dto.UsageTypeReportResponse(
         v.typeCode,
         v.typeName,
         v.projectNameEn,

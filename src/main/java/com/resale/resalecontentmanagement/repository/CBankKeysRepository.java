@@ -12,7 +12,7 @@ import java.util.List;
 public interface CBankKeysRepository  extends JpaRepository<CBankKeys, Integer> {
 
     @Query("""
-        SELECT new com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.components.cBank.dto.BankKeyResponseDTO(
+        SELECT new com.resale.resalecontentmanagement.components.cBank.dto.BankKeyResponseDTO(
             k.id,
             b.id,
             b.bankName,
@@ -28,7 +28,7 @@ public interface CBankKeysRepository  extends JpaRepository<CBankKeys, Integer> 
     CBankKeys findCBankKeysByProjectId(int projectId);
 
     @Query("""
-    SELECT new com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.components.cBank.dto.BankKeyDetailsResponseDTO(
+    SELECT new com.resale.resalecontentmanagement.components.cBank.dto.BankKeyDetailsResponseDTO(
         k.id,
         b.id,
         b.bankName,

@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Repository
 public interface UnitsReportRepository extends JpaRepository<UnitReportView, Integer> {
     @Query("""
-    SELECT new com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.report.dto.UnitReportResponse(
+    SELECT new com.resale.resalecontentmanagement.report.dto.UnitReportResponse(
         v.unitCode,
         v.usageTypeEn,
         v.usageTypeAr,

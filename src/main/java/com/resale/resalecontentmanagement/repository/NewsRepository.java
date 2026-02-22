@@ -14,7 +14,7 @@ public interface NewsRepository extends JpaRepository<News, Integer> {
 
         @Query("""
         SELECT n FROM News n
-        WHERE n.status = com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.model.NewsStatus.ACTIVE
+        WHERE n.status = com.resale.resalecontentmanagement.model.NewsStatus.ACTIVE
         AND (n.expirationDate IS NULL OR n.expirationDate >= CURRENT_DATE)
         ORDER BY n.createdAt DESC
     """)
@@ -23,7 +23,7 @@ public interface NewsRepository extends JpaRepository<News, Integer> {
     @Query("""
     SELECT n FROM News n
     WHERE n.id = :id
-    AND n.status = com.vso.tmgvsocontentmanagement.tmgvsocontentmanagement.model.NewsStatus.ACTIVE
+    AND n.status = com.resale.resalecontentmanagement.model.NewsStatus.ACTIVE
     AND (n.expirationDate IS NULL OR n.expirationDate >= CURRENT_DATE)
 """)
     Optional<News> findActiveAndNotExpiredById(Integer id);
